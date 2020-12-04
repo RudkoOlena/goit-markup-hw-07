@@ -1,0 +1,32 @@
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 94px;
+}
+
+.clients-item-link {
+    height: 90px;
+    width: 170px;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    @include flex();
+    
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover .clients-icons-svg,
+        &:focus .clients-icons-svg {
+        fill: $accent-color;
+    }
+    
+        &:hover,
+        &:focus {
+        border-color: $accent-color;        
+    }
+}
+
+.clients-icons-svg {
+     fill: $border-color;
+     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ 

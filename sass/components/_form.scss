@@ -1,0 +1,177 @@
+
+.field {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.comment {
+    resize: none;
+    width: 448px;
+    height: 96px;
+    @include fonts(400, 14px, 1.14, 0.01em);
+    border: 1px solid;
+    border-color: $modal-borders-color;
+    color: $modal-textarea-color;
+    padding: 12px 16px;
+
+
+    &:hover {
+        border-color: $accent-color;
+    }
+
+}
+
+.modal-title {
+    @include fonts(700, 20px, 1.15, 0.03em);
+    text-align: center;
+    color: $secondary-text-color;
+    margin-bottom: 12px;
+ }
+
+.field-label {
+    top: 0;
+    left: 0;
+    @include fonts(400, 12px, 1.17, 0.01em);
+    color: $primary-text-color;
+    margin-top: 10px;
+    margin-bottom: 4px;
+
+    &.hidden-checkbox {
+        @include flex();
+    }
+}
+
+.field-input {
+    display: inline-block;
+    width: 448px;
+    height: 40px;
+    border: 1px solid;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border-color: $modal-borders-color;
+    padding-left: 40px;
+
+
+    &:hover +.modal-svg {
+        fill: $accent-color;
+    }
+
+    &:hover {
+        border-color: $accent-color;
+    }
+}
+
+.agree {
+    margin-right: 5px;
+
+    &>a {
+        font-size: 14px;
+        line-height: 1.71;  
+        letter-spacing: 0.03em;
+        color: $primary-text-color;
+    }
+} 
+
+
+.agree-link {
+    color: $accent-color;
+    text-decoration: underline;
+}
+
+.field-button {
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    width: 200px;
+    height: 50px;
+    background-color: $accent-color;
+    color: $main-title-text-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0px;
+    margin: 0 auto;
+}
+
+.field-button-position {
+    padding-left: 124px;
+    padding-top: 30px;
+}
+
+.checkbox,
+.field-label {
+    display: inline-block;
+}
+
+
+.input-svg:focus-within .modal-svg {
+   fill: $accent-color
+} 
+ 
+ .field-input-footer {
+    display: inline-block;
+    width: 360px;
+    height: 50px;
+    border: 1px solid;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-color: $footer-input-border-color;
+    background-color: transparent;
+    margin-top: 20px;
+    padding-left: 16px;
+
+    &::placeholder {
+        @include fonts(400, 16px, 1.25, 0.03em);
+    }
+
+}
+
+footer .field-button {
+    margin-left: 12px;
+}
+
+
+.modal-svg {
+    position: absolute;
+    top: 70%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    fill: $secondary-text-color
+}
+
+.input-svg {
+    position: relative;
+}
+
+.checkbox {
+    appearance: none;
+    position: absolute;
+
+    &:checked + .icon {
+        background-image: url(../images/check.svg);
+        background-size: contain;
+        background-origin: border-box;
+        border-color: transparent;
+    }
+
+}
+
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $secondary-text-color;
+    border-radius: 4px;
+    margin-right: 8px;  
+}
+
+
+
+
+

@@ -1,0 +1,102 @@
+
+.projects-title {
+    @include fonts(700, 18px, 2.00, 0.06em);
+    color: $secondary-text-color;
+    
+    margin-top: 20px;
+}
+
+.projects-link {
+    text-decoration: none;
+    display: inline-block;
+    @include fonts(500, 16px, 1.62, 0.03em);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    color: $secondary-text-color;
+    background-color: $filter-button-color;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 45px;
+    margin-right: 8px;
+    text-align: center;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:last-child {
+        margin-right: 0;
+    } 
+}
+
+.project-item {
+    margin-top: 4px;
+    margin-bottom: 20px;
+    color: $primary-text-color
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 94px;
+}
+.portfolio-list-item {
+    width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    background-color: $main-title-text-color;
+    border: 1px solid #EEEEEE;
+
+    &:nth-child(3n) {
+        margin-right: 0px;
+    }
+    
+    &:nth-last-child(-n+3) {
+        margin-bottom: 0px;
+    }
+
+    &>a:hover p,
+    &>a:focus p {
+    opacity: 1;
+    transform: translateY(0);
+    }
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16)
+    }
+}
+
+.portfolio-item-hover {
+    position: relative;
+    overflow: hidden;
+
+    &>p {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(100%);
+        display: flex;
+        align-items: center;
+        
+        
+        font-family: inherit; 
+        @include fonts(400, 18px, 1.56, 0.03em);
+        margin: 0;
+        padding: 24px;
+        
+        opacity: 0;
+        
+        
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+        color: $main-title-text-color;
+        background-color: $backgroud-accent-color-opacity;
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+
